@@ -117,11 +117,11 @@ img {
 }
 .global_nav a{
     cursor:　pointer;
-    color: #888888;
+    color: #CDAAA0;
     font-weight: 200;
 }
 .global_nav a:hover {
-    color: #545454;
+    color: #87645A;
 }
 #nav-input{
     display: none;
@@ -135,7 +135,6 @@ img {
 }
 #home {
     background-image: url(../img/home_bg.svg), linear-gradient(rgba(255, 255, 255, .2),rgba(183, 206, 219));
-    background-blend-mode: screen;
     min-height: 100vh;
 }
 
@@ -390,6 +389,13 @@ h2 small{
 }
 
 /* style for tablet (949px) */
+@media (max-width: 535){
+    #home {
+        background-image: url(../img/home_bg_un325.svg), linear-gradient(rgba(255, 255, 255, .2),rgba(183, 206, 219));
+        min-height: 100vh;
+    }
+}
+
 @media (max-width: 520px){
     .friends_box{
         display: block;
