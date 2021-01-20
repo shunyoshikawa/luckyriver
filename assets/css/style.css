@@ -1,0 +1,567 @@
+@charset "UTF-8";
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.class {
+	color: rgba(225, 225, 225, 0.5);
+}
+
+/* common style */
+html{
+    box-sizing: border-box;
+  }
+  *,
+  *::before,
+  *::after{
+    box-sizing: inherit;
+  }
+body ,html {
+    animation: fadeIn 1s ease 0s 1 normal;
+    -webkit-animation: fadeIn 1s ease 0s 1 normal;
+    height: 100%;
+    min-height: 250px;
+    font-size: 100%;
+    font-family: 'Noto Serif JP', serif;
+    line-height: 1.5;
+    color: #888888;
+}
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+@-webkit-keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+
+
+
+
+/* global header */
+.global_header {
+    background-color: #ffffff;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    box-shadow: 0 3px 6px 6px #ffffff;
+    z-index: 1;
+}
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    padding: 8px 10%;
+}
+.logo {
+    width: 40px;
+    margin-top: 8px;
+}
+.global_nav {
+    display: flex;
+    font-size: 1.1em;
+    list-style: none;
+    margin-top: .8em;
+}
+.global_nav li {
+    margin-left: 8vw;
+}
+.global_nav a{
+    cursor:　pointer;
+    color: #888888;
+    font-weight: 200;
+}
+.global_nav a:hover {
+    color: #545454;
+}
+#nav-input{
+    display: none;
+}
+
+/* home style */
+.hero_img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#home {
+    background-image: url(../img/home_bg.svg), linear-gradient(rgba(255, 255, 255, .2),rgba(183, 206, 219));
+    background-blend-mode: screen;
+    min-height: 100vh;
+}
+
+
+/* about style */
+/* about contents style */
+.grid{
+    display: grid;
+    gap: 1vw;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-row: 340px;
+    margin-bottom: 6vh;
+}
+.item{
+    margin-bottom: 4vh;
+}
+.item img{
+    object-fit: cover;
+}
+.item p{
+    font-size: 0.8em;
+}
+
+
+/* intro part */
+.content_intro{
+    margin: 0, auto;
+    height: 100vh;
+    text-align: center;
+}
+.content_intro h2{
+    margin: 38vh auto 3%;
+    font-size: 2em;
+}
+.content_intro p{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: .85em;
+    font-weight: 500;
+    text-indent: 0.7em;
+    text-align: justify; 
+}
+
+
+/* contact style */
+.contact_contents{
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    z-index: 0;
+}
+/* address text style */
+.addr_info{
+    position: relative;
+    width: 50%;
+    height: 60vh;
+    margin-top: 20vh;
+}
+.addr_text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 200px;    
+    max-width: 410px;
+}
+.addr_text h2{
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+}
+h2 small{
+    font-size: .6em;
+    font-weight: 100;
+}
+.addr_text p{
+    font-size: .85em;
+}
+.addr_text_detail{
+    margin-top: 2em;
+    font-size: .75em;
+    line-height: 1.6em;
+    text-align: justify;
+}
+/* address logo style */
+.addr_info_container{
+    position:relative;
+    margin-top: 20vh;
+    margin-right: 4vw;
+    width: 50%;
+    height: 60vh;
+    background-color: #b7ceda;
+}
+.addr_info_logo img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 10vw;
+    min-width: 86px;
+    height: 60vh;
+}
+/* location Google map */
+.lication_map iframe{
+    width: 100%;
+    margin-bottom: 12vh;
+}
+/* SNS links style */
+#sns .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+#sns .sub_title{
+    display: block;
+    margin-bottom: 26px;
+    font-size: 1em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px #b7ceda solid;
+}
+.sns_box{
+    position: relative;
+    width: 48%;
+    max-width: 500px;
+    margin-bottom: 10vh;
+}
+.sns_box iframe{
+    height: 100%;
+    width: 100%;
+}
+/* instagram link */
+.sns_box img{
+    display: block;
+    width: 100%;
+    object-position:0% 3%;
+    object-fit: cover;
+    max-height: 130px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #f0f0f0;
+}
+
+
+/* friends style */
+/* friends contents style */
+.friends_box{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: #8888884a solid 1px;
+    padding-bottom: 10%;
+    margin-bottom: 10%;
+}
+.friends_box img{
+    width: 50%;
+    height: 30%;
+    min-width: 360px;
+    min-height: 300px;
+    object-fit: cover;
+}
+.friends_contents{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    z-index: 0;
+}
+.friends_info{
+    display: block;
+    margin: 0 auto;
+}
+.friends_text{
+    margin: 0 5% 0 0;
+    width: 50%;
+}
+.friends_text br{
+    display: none;
+}
+.friends_text_detail{
+    margin-top: 10px;
+    font-size: .75em;
+    line-height: 1.6em;
+    text-align: justify;
+}
+.friends_text h2{
+    font-size: 1.6em;
+    /* Take a negative margin with looking for the exact way to do the head alignment on the texts shape. */
+    margin-top: -0.35em;
+}
+.friends_text > .indent-01{
+    text-indent: -0.1em;
+}
+.friends_text > .indent-015{
+    text-indent: -0.15em;
+}
+.friends_text > p{
+    font-size: 0.85em;
+    margin-top: 40px;
+}
+.friends_text h2 small{
+    font-size: 0.25em;
+}
+.friends_text_detail p{
+    font-size: 1em;
+    font-weight: 100;
+    line-height: 1.5em;
+    margin-top: 20px;
+}
+
+
+
+
+/* ----- @media Media Queries ----- */
+
+/* style for tablet (949px) */
+@media (max-width: 949px){
+    /* friends contents style */
+    .friends_info{
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .friends_box{
+        display: flex;
+        margin-bottom: 15%;
+    }
+    .friends_text{
+        min-width: 120px;
+        min-height: 100px;
+        width: 100%;
+    }
+    .friends_text br{
+        display: block;
+    }
+    .friends_box img{
+        min-width: 120px;
+        min-height: 100px;
+        width: 100%;
+        height: auto;
+    }
+    .friends_text h2{
+        font-size: 1.5em;
+        /* Take a negative margin with looking for the exact way to do the head alignment on the texts shape. */
+        margin-top: 0em;
+    }
+    .friends_text > .indent-01{
+        text-indent: -0.1em;
+    }
+    .friends_text > .indent-015{
+        text-indent: -0.15em;
+    }
+}
+
+/* style for tablet (949px) */
+@media (max-width: 520px){
+    .friends_box{
+        display: block;
+        margin-bottom: 15%;
+    }
+    .friends_text br{
+        display: none;
+    }
+}
+
+/* style for tablet (579px) */
+@media (max-width: 579px){
+
+    header {
+        position: relative;
+        background:#fff;
+    }
+    #nav-drawer {
+        display: block;
+        margin-top: 12px;
+        cursor: pointer;
+    }
+    .nav-unshown {
+        display:none;
+    }
+    #nav-open {
+        display: inline-block;
+        width: 36px;
+        height: 22px;
+    }
+
+    /*hamburger icon*/
+    #nav-open span, #nav-open span:before, #nav-open span:after {
+        position: absolute;
+        height: 4px;
+        width: 36px;
+        border-radius: 3px;
+        background: #b7ceda;
+        display: block;
+        content: '';
+        cursor: pointer;
+        -webkit-transition: 0.5s ease-in-out;
+        -moz-transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
+    }
+    #nav-open span:before {
+        bottom: -14px;
+    }
+    #nav-open span:after {
+        bottom: -28px;
+    }
+
+    /*behind　cover*/
+    #nav-close {
+        display: none;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #131313d2;
+        opacity: 0;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+    }
+    /*menu contents*/
+    #nav-content {
+        overflow: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 11;
+        width: 70%;
+        height: 100%;
+        background: #fff;
+        transition: .3s ease-in-out;
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+    .global_nav{
+        display: block;
+        position: absolute;
+        margin: 0 auto 30vh;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 200px; 
+    }
+    .global_nav li{
+        display: block;
+        text-align: center;
+        font-size: 1.2em;
+        line-height: 4.8em;
+        border-bottom: #b7ceda64 solid 1px;
+    }
+
+    /*nav checked*/
+    #nav-input:checked ~ #nav-close {
+        display: block;
+        opacity: .5;
+    }
+
+    #nav-input:checked ~ #nav-content {
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+        box-shadow: 12px 0 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* about contents style */
+    .grid{
+        display: grid;
+        gap: 0;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        grid-row: 340px;
+        margin-bottom: 8vh;
+    }
+
+    /* address text style */
+    .addr_info{
+        position: relative;
+        display: block;
+        width: 50%;
+        height: 60vh;
+        margin: auto;
+    }
+    .addr_text h2{
+        font-size: 1.5em;
+        margin-top: .5em;
+        margin-bottom: 1em;
+    }
+    .addr_text p{
+        font-size: .75em;
+        text-decoration: none;
+    }
+    .addr_text_detail{
+        margin-top: 1.2em;
+        font-size: .75em;
+        line-height: 1.5em;
+    }
+
+    /* friends contents style */
+    .friends_text_detail{
+        margin: 15px 0;
+        font-size: .75em;
+        line-height: 1.5em;
+        text-align: justify;
+    }
+    .friends_text h2{
+        font-size: 1.25em;
+        /* Take a negative margin with looking for the exact way to do the head alignment on the texts shape. */
+        margin-top: 0em;
+    }
+    .friends_text > .indent-01{
+        text-indent: -0.1em;
+    }
+    .friends_text > .indent-015{
+        text-indent: -0.15em;
+    }
+    .friends_text > p{
+        font-size: 0.85em;
+        margin-top: 18px;
+    }
+    .friends_text h2 small{
+        font-size: 0.25em;
+    }
+    .friends_text_detail p{
+        font-size: 1em;
+        line-height: 1.5em;
+        margin-top: 0px;
+    }
+
+}
+
